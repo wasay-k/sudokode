@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <iostream>
+#include "utilities.h"
+
+char evaluate_dtype(std::string data)
+{
+    bool is_string = false;
+    bool is_int = false;
+    bool is_char = false;
+    auto result = data.find("\"");
+    if (result != std::string::npos)
+    {
+        is_string = true;
+        return 's';
+    }
+    else
+    {
+        auto result = data.find("\'");
+        if (result != std::string::npos)
+        {
+            is_char = true;
+            return 'c';
+        }
+        else
+        {
+            int result = int(data[0]);
+            if (result >= 48 && result <= 57)
+            {
+                return 'i';
+            }
+        }
+    }
+}
