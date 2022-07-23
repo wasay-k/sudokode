@@ -1,0 +1,6 @@
+Trynna initialize IDIOT uninitialized value
+Trynna initialize PI uninitialized value
+Trynna initialize EEEE uninitialized value
+Initiazlzing const of type char with value 104 and identifier test_CONST
+Initiazlzing const of type string with value KHAN and identifier TEST_STR
+Initiazlzing const of type int with value 8 and identifier CAKES

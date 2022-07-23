@@ -15,16 +15,17 @@ int main(int argc, char **argv)
     std::vector<sdkINTEGER> global_ints;
     std::vector<sdkSTRING> global_strings;
     std::vector<sdkCHAR> global_chars;
-    std::vector<std::string> valid_identifiers;
-    std::cout << typeid(global_strings).name() << std::endl;
+    std::vector<sdkMAPPER> global_mappers;
     std::ifstream codeFile;
+    std::ofstream dump_file;
     codeFile.open(argv[1]);
+
     std::string line;
     if (codeFile.is_open())
     {
         while (getline(codeFile, line))
         {
-            processLine(line, valid_identifiers, global_strings, global_ints, global_chars);
+            processLine(line, global_mappers, global_strings, global_ints, global_chars, dump_file);
         }
         codeFile.close();
     }
