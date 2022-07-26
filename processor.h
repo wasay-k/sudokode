@@ -6,5 +6,6 @@
 #include "headers_and_cpps/sdkINTEGER.h"
 #include "headers_and_cpps/sdkCHAR.h"
 #include "headers_and_cpps/sdkMAPPER.h"
+#include "headers_and_cpps/sdkFLOAT.h"
 
-void processLine(std::string line, std::vector<sdkMAPPER> &map_vector, std::vector<sdkSTRING> &str_v, std::vector<sdkINTEGER> &int_v, std::vector<sdkCHAR> &char_v, std::ofstream& log_file);
+void processLine(std::string line, std::vector<sdkMAPPER> &map_vector, std::vector<sdkSTRING> &str_v, std::vector<sdkINTEGER> &int_v, std::vector<sdkCHAR> &char_v, std::vector<sdkFLOAT> &float_v, std::ofstream &log_file);

@@ -18,6 +18,12 @@ sdkMAPPER::sdkMAPPER(std::string var_identifier, sdkCHAR *ptr)
     identifier = var_identifier;
     char_ptr = ptr;
 }
+sdkMAPPER::sdkMAPPER(std::string var_identifier, sdkFLOAT *ptr)
+{
+    type = 'f';
+    identifier = var_identifier;
+    float_ptr = ptr;
+}
 sdkSTRING *sdkMAPPER::get_str_ptr()
 {
     return str_ptr;
@@ -29,6 +35,10 @@ sdkINTEGER *sdkMAPPER::get_int_ptr()
 sdkCHAR *sdkMAPPER::get_char_ptr()
 {
     return char_ptr;
+}
+sdkFLOAT *sdkMAPPER::get_float_ptr()
+{
+    return float_ptr;
 }
 char sdkMAPPER::get_type()
 {

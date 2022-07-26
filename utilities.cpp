@@ -24,9 +24,17 @@ char evaluate_dtype(std::string data)
         else
         {
             int result = int(data[0]);
-            if (result >= 48 && result <= 57)
+            if (result >= 48 && result <= 57 && (data.find(".") == std::string::npos))
             {
                 return 'i';
+            }
+            else
+            {
+                auto result = data.find(".");
+                if (result != std::string::npos)
+                {
+                    return 'f';
+                }
             }
         }
     }
@@ -34,5 +42,5 @@ char evaluate_dtype(std::string data)
 
 void dump(std::ofstream &dump_file, std::string d_to_dump)
 {
-    dump_file << d_to_dump << "\n";
+    dump_file << d_to_dump << '\n';
 }
