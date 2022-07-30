@@ -11,11 +11,7 @@
 
 int main(int argc, char **argv)
 {
-    std::vector<sdkINTEGER> global_ints;
-    std::vector<sdkSTRING> global_strings;
-    std::vector<sdkCHAR> global_chars;
-    std::vector<sdkFLOAT> global_floats;
-    std::vector<sdkMAPPER> global_mappers;
+    custom_types global_dtypes;
     std::ifstream codeFile;
     std::ofstream dump_file;
     if (std::filesystem::exists(argv[2]))
@@ -34,7 +30,7 @@ int main(int argc, char **argv)
     {
         while (getline(codeFile, line))
         {
-            processLine(line, global_mappers, global_strings, global_ints, global_chars, global_floats, dump_file);
+            processLine(line, global_dtypes, dump_file);
         }
         codeFile.close();
     }

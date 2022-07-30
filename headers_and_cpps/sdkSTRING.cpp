@@ -1,7 +1,7 @@
 #include "sdkSTRING.h"
 #include <iostream>
 
-sdkSTRING::sdkSTRING(std::string var_identifier, std::string var_value, std::string init_type)
+sdkSTRING::sdkSTRING(std::string var_identifier, std::string init_type, std::string var_value)
 {
     identifier = var_identifier;
     value = var_value;
@@ -12,13 +12,14 @@ sdkSTRING::sdkSTRING(std::string var_identifier, std::string var_value, std::str
 }
 void sdkSTRING::set_value(std::string value_to_set)
 {
-    if (is_const == false)
+    if (!is_const)
     {
         value = value_to_set;
+        std::cout << "Set value " << value << " to variable " << identifier << '.' << std::endl;
     }
     else
     {
-        std::cout << "ERROR: Attempting to assign value to a constant variable" << std::endl;
+        std::cout << "ERROR: Assigning value to constant variable " << identifier << std::endl;
     }
 }
 std::string sdkSTRING::get_value()

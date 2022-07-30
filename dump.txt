@@ -1,6 +1,6 @@
-Initialized str_1 of type STRING with uninitialized value.
-Initializednum1 of type INTEGER with uninitialized value.
-Initialized var with identifier gender of type char with uninitialized value.
-Initialized const of type char with value 104 and identifier test_CONST
+Initialized str_1 of type STRING with value "BROOOO"
+Initialized num1 of type INTEGER with value 77
+Initizalized var with identifiergender of type char with value M
+Initialized const of type char with value h and identifier test_CONST
 Initialized const of type string with value KHAN and identifier TEST_STR
 Initialized const of type float with value 3.140000 and identifier PI

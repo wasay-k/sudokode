@@ -7,5 +7,9 @@
 #include "headers_and_cpps/sdkCHAR.h"
 #include "headers_and_cpps/sdkMAPPER.h"
 #include "headers_and_cpps/sdkFLOAT.h"
+#include "utilities.h"
 
-void processLine(std::string line, std::vector<sdkMAPPER> &map_vector, std::vector<sdkSTRING> &str_v, std::vector<sdkINTEGER> &int_v, std::vector<sdkCHAR> &char_v, std::vector<sdkFLOAT> &float_v, std::ofstream &log_file);
+void declare_variable(std::stringstream &line, custom_types &global_types, std::ofstream &log_file);
+void declare_constant(std::stringstream &line, custom_types &global_types, std::ofstream &log_file);
+void processLine(std::string line, custom_types &global_types, std::ofstream &log_file);
+void processLine(std::string line, custom_types &global_types, custom_types &, std::ofstream &log_file);

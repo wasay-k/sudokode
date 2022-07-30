@@ -1,7 +1,7 @@
 #include "sdkINTEGER.h"
 #include <iostream>
 
-sdkINTEGER::sdkINTEGER(std::string var_identifier, int var_value, std::string init_type)
+sdkINTEGER::sdkINTEGER(std::string var_identifier, std::string init_type, int var_value)
 {
     identifier = var_identifier;
     value = var_value;
@@ -12,13 +12,14 @@ sdkINTEGER::sdkINTEGER(std::string var_identifier, int var_value, std::string in
 }
 void sdkINTEGER::set_value(int value_to_set)
 {
-    if (is_const = false)
+    if (!is_const)
     {
         value = value_to_set;
+        std::cout << "Set value " << value << " to variable " << identifier << '.' << std::endl;
     }
     else
     {
-        std::cout << "ERROR: Attempting to assign value to a constant variable" << std::endl;
+        std::cout << "ERROR: Assigning value to constant variable " << identifier << std::endl;
     }
 }
 int sdkINTEGER::get_value()
