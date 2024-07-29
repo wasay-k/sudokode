@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 
 class Token {
@@ -10,4 +10,7 @@ class Token {
         IDENITIFIER,
         ASSIGN
     };
+    TokenType type;
+    std::string value;
+    Token(TokenType type, std::string value): type(type), value(value) {};
 }
