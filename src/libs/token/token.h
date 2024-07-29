@@ -5,7 +5,10 @@ class Token {
     public:
     enum TokenType {
         NUMBER,
-        OPERATOR,
+        PLUS,
+        MINUS,
+        DIVIDE,
+        MULTIPLY,
         PARENTHESIS,
         IDENITIFIER,
         ASSIGN
