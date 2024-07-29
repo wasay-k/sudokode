@@ -12,5 +12,6 @@ class Token {
     };
     TokenType type;
     std::string value;
+    Token(){};
     Token(TokenType type, std::string value): type(type), value(value) {};
 };
