@@ -24,13 +24,13 @@ Token Lexer::nextToken(){
         switch (nextChar)
         {
         case '+':
-            return Token(Token::OPERATOR, "+");
+            return Token(Token::PLUS, "+");
         case '-':
-        return Token(Token::OPERATOR, "-");
+        return Token(Token::MINUS, "-");
         case '*':
-        return Token(Token::OPERATOR, "*");
+        return Token(Token::MULTIPLY, "*");
         case '/':
-        return Token(Token::OPERATOR, "/");
+        return Token(Token::DIVIDE, "/");
         case '(':
         return Token(Token::PARENTHESIS, "(");
         case ')':
