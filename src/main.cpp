@@ -15,5 +15,8 @@ int main(int argc, char** argv){
         while(getline(file, line)){
             std::cout << line << std::endl;
         }
+    }else{
+        std::cerr << "Error: File not found" << std::endl;
+    }
     return 0;
 }
