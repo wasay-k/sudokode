@@ -2,7 +2,7 @@
 
 void Parser::ParseExpression(){
     parseAssignmentExpression();
-       if (currentToken.type != Token::EOF) {
+       if (currentToken.type != Token::EOS) {
            std::cerr << "Unexpected token: " << currentToken.value << std::endl;
            exit(1);
        }

@@ -11,7 +11,8 @@ class Token {
         MULTIPLY,
         PARENTHESIS,
         IDENTIFIER,
-        ASSIGN
+        ASSIGN,
+        EOS
     };
     TokenType type;
     std::string value;
