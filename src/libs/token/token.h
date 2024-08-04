@@ -10,7 +10,7 @@ class Token {
         DIVIDE,
         MULTIPLY,
         PARENTHESIS,
-        IDENITIFIER,
+        IDENTIFIER,
         ASSIGN
     };
     TokenType type;
